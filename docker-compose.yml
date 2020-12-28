@@ -18,7 +18,7 @@ services:
                 max-size: 10m
 
     servatrice:
-        image: saadbruno/servatrice:2.7.6
+        image: saadbruno/servatrice:2.7.5
         container_name: servatrice_server
         depends_on:
             - mysql
