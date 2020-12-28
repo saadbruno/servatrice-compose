@@ -31,4 +31,4 @@ It's okay to keep the MySQL "password" since it's only visible from within the d
 ## Servatrice
 Cockatrice doesn't have an official Servatrice image, and all the other ones in Docker Hub are outdated. So I built my own, using the default settings [listed in their wiki](https://github.com/Cockatrice/Cockatrice/wiki/Setting-up-Servatrice#2-servatrice-server-build-and-setup).
 
-This image is currently running Servatrice v2.7.6
+This image is currently running Servatrice v2.7.5
