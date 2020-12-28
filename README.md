@@ -7,11 +7,11 @@ The intention of this repo is to make setting up a Cockatrice server with a data
 ## Setup:
 - Clone the repo
 - copy `./Servatrice/servatrice.example.ini` to `./Servatrice/servatrice.ini` and edit it to fit your needs
-- Run `make run-mysql` to start the MySQL server
 - Run `make run` to start the Servatrice server
 
 **And that's it!** Your Cockatrice server should be up and running! Read along for more details and things you can change / configure.
 
+> Note: The first time running the docker-compose setup, the MySQL server will take a little time to run the initial setup scripts. Due to this, the Servatrice instance may fail the first few attempts to connect to the database. Servatrice is set to `restart: unless-stopped` in the docker-compose.yml, which will allow it to continue attempting to start up. Once the MySQL scripts have completed, Servatrice should then connect automatically on the next attempt.
 
 ## Server config:
 You can change all the server settings on the `./Servatrice/servatrice.ini` file you copied on the previous Setup setp.
