@@ -8,9 +8,10 @@ The intention of this repo is to make setting up a Cockatrice server with a data
 - Clone the repo
 - copy `./Servatrice/servatrice.example.ini` to `./Servatrice/servatrice.ini` and edit it to fit your needs
 - Run `make run-mysql` to start the MySQL server
-- Run `Make run` to start the Servatrice server
+- Run `make run` to start the Servatrice server
 
-It's okay to keep the MySQL "password" since it's only visible from within the docker network and it's not exposed. But if you want to change it, edit both the `docker-compose.yml` and the `Servatrice/servatrice.ini` to match
+**And that's it!** Your Cockatrice server should be up and running! Read along for more details and things you can change / configure.
+
 
 ## Server config:
 You can change all the server settings on the `./Servatrice/servatrice.ini` file you copied on the previous Setup setp.
@@ -18,6 +19,8 @@ You can change all the server settings on the `./Servatrice/servatrice.ini` file
 If you want to enable users to have accounts and log in, you have to change a few settings in that file:
 - Under the `[authentication]` section, change `method=none` to `method=sql` and `regonly=false` to `regonly=true`
 - Under the `[registration]` section, change `enabled=false` to `enabled=true`
+
+It's okay to keep the MySQL "password" since it's only visible from within the docker network and it's not exposed. But if you want to change it, edit both the `docker-compose.yml` and the `Servatrice/servatrice.ini` to match
 
 ## Maintenance:
 - You can restart the server by running `make restart`, the MySQL db by running `make restart-mysql` and both by running `make restart-all`
