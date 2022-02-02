@@ -29,6 +29,7 @@ services:
         entrypoint: "/bin/bash -c 'sleep 10; servatrice --config /tmp/Servatrice/servatrice.ini --log-to-console'"
         volumes:
             - ./Servatrice:/tmp/Servatrice
+            - ./logs:/var/logs/Servatrice
         restart: unless-stopped
         logging:
             options:
